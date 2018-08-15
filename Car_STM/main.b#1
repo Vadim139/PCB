@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
+<grid distance="0.1" unitdist="mm" unit="mm" style="lines" multiple="1" display="yes" altdistance="0.1" altunitdist="mm" altunit="mm"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -1309,22 +1309,6 @@ type 0204, grid 7.5 mm</description>
 <rectangle x1="-1.0668" y1="-0.6985" x2="-0.4168" y2="0.7015" layer="51"/>
 <rectangle x1="-0.1999" y1="-0.5001" x2="0.1999" y2="0.5001" layer="35"/>
 </package>
-<package name="R2512">
-<description>&lt;b&gt;RESISTOR&lt;/b&gt;</description>
-<wire x1="-2.362" y1="1.473" x2="2.387" y2="1.473" width="0.1524" layer="51"/>
-<wire x1="-2.362" y1="-1.473" x2="2.387" y2="-1.473" width="0.1524" layer="51"/>
-<wire x1="-3.973" y1="1.983" x2="3.973" y2="1.983" width="0.0508" layer="39"/>
-<wire x1="3.973" y1="1.983" x2="3.973" y2="-1.983" width="0.0508" layer="39"/>
-<wire x1="3.973" y1="-1.983" x2="-3.973" y2="-1.983" width="0.0508" layer="39"/>
-<wire x1="-3.973" y1="-1.983" x2="-3.973" y2="1.983" width="0.0508" layer="39"/>
-<smd name="1" x="-2.8" y="0" dx="1.8" dy="3.2" layer="1"/>
-<smd name="2" x="2.8" y="0" dx="1.8" dy="3.2" layer="1"/>
-<text x="-2.54" y="1.905" size="1.27" layer="25">&gt;NAME</text>
-<text x="-2.54" y="-3.175" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-3.2004" y1="-1.5494" x2="-2.3505" y2="1.5507" layer="51"/>
-<rectangle x1="2.3622" y1="-1.5494" x2="3.2121" y2="1.5507" layer="51"/>
-<rectangle x1="-0.5001" y1="-1" x2="0.5001" y2="1" layer="35"/>
-</package>
 </packages>
 </library>
 <library name="diode">
@@ -2550,8 +2534,6 @@ design rules under a new name.</description>
 <element name="R23" library="resistor" package="R0805" value="2k2" x="-156.7" y="-520.7"/>
 <element name="D4" library="_hhn_diodes_smd" package="SOD80_DO213AA_MINIMELF" value="LL4148" x="-155.6" y="-526.8"/>
 <element name="D6" library="_hhn_diodes_smd" package="SOD80_DO213AA_MINIMELF" value="LL4148" x="-155.6" y="-532.9"/>
-<element name="FUSE1" library="resistor" package="R2512" value="F0.315" x="-157" y="-544"/>
-<element name="FUSE2" library="resistor" package="R2512" value="F1.0" x="-156" y="-552"/>
 </elements>
 <signals>
 <signal name="L1">
@@ -3072,11 +3054,15 @@ design rules under a new name.</description>
 <wire x1="-122.1" y1="-446.5" x2="-99.1" y2="-66.1" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$40">
+<contactref element="LM1084" pad="3"/>
+<contactref element="C7" pad="1"/>
+<contactref element="C4" pad="1"/>
+<contactref element="LM317" pad="3"/>
 <contactref element="Q9" pad="4"/>
-<contactref element="FUSE1" pad="1"/>
-<contactref element="FUSE2" pad="1"/>
-<wire x1="-159.8" y1="-544" x2="-158.8" y2="-552" width="0" layer="19" extent="1-1"/>
-<wire x1="-153.2" y1="-483.8" x2="-159.8" y2="-544" width="0" layer="19" extent="1-1"/>
+<wire x1="47.67" y1="81.42" x2="66.72" y2="81.42" width="0" layer="19" extent="1-1"/>
+<wire x1="59.94" y1="56.64" x2="66.72" y2="81.42" width="0" layer="19" extent="1-1"/>
+<wire x1="38.25" y1="50.64" x2="59.94" y2="56.64" width="0" layer="19" extent="1-1"/>
+<wire x1="-153.2" y1="-483.8" x2="38.25" y2="50.64" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="MAIN_POW">
 <contactref element="IC1" pad="2"/>
@@ -3120,20 +3106,6 @@ design rules under a new name.</description>
 <contactref element="R23" pad="2"/>
 <contactref element="D6" pad="C"/>
 <wire x1="-155.75" y1="-520.7" x2="-157.3" y2="-532.9" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$46">
-<contactref element="LM1084" pad="3"/>
-<contactref element="C7" pad="1"/>
-<contactref element="FUSE1" pad="2"/>
-<wire x1="59.94" y1="56.64" x2="-154.2" y2="-544" width="0" layer="19" extent="1-1"/>
-<wire x1="47.67" y1="81.42" x2="59.94" y2="56.64" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$49">
-<contactref element="C4" pad="1"/>
-<contactref element="LM317" pad="3"/>
-<contactref element="FUSE2" pad="2"/>
-<wire x1="38.25" y1="50.64" x2="-153.2" y2="-552" width="0" layer="19" extent="1-1"/>
-<wire x1="66.72" y1="81.42" x2="38.25" y2="50.64" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>

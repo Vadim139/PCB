@@ -1,0 +1,10 @@
+3V3:
+	RFID - 26 mA
+	Wat_sensor - 1 mA
+	CAN - 17 mA
+	BT - 80 mA
+	PIR - 50 uA x2
+	STM32 - 200 mA (150 I/O, 50 RUN)
+		= 325 -> 350 mA 
+4V2:
+	GSM - 1A
