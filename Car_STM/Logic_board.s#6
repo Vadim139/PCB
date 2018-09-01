@@ -25349,12 +25349,6 @@ distributor RS 193-9117</description>
 <part name="SJ5" library="jumper" deviceset="SJ" device=""/>
 <part name="R13" library="resistor" deviceset="R-EU_" device="R0805" value="100k"/>
 <part name="Q9" library="transistor-small-signal" deviceset="BSS84" device=""/>
-<part name="R44" library="resistor" deviceset="R-EU_" device="R0805" value="6k8"/>
-<part name="R45" library="resistor" deviceset="R-EU_" device="R0805" value="1k8"/>
-<part name="GND44" library="supply1" deviceset="GND" device=""/>
-<part name="R46" library="resistor" deviceset="R-EU_" device="R0805" value="6k8"/>
-<part name="R47" library="resistor" deviceset="R-EU_" device="R0805" value="1k8"/>
-<part name="GND45" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -25621,12 +25615,6 @@ czarny</text>
 <instance part="SJ5" gate="1" x="127" y="60.96"/>
 <instance part="R13" gate="G$1" x="139.7" y="60.96"/>
 <instance part="Q9" gate="G$1" x="-124.46" y="-53.34"/>
-<instance part="R44" gate="G$1" x="-180.34" y="119.38"/>
-<instance part="R45" gate="G$1" x="-193.04" y="119.38"/>
-<instance part="GND44" gate="1" x="-200.66" y="114.3"/>
-<instance part="R46" gate="G$1" x="-180.34" y="134.62"/>
-<instance part="R47" gate="G$1" x="-193.04" y="134.62"/>
-<instance part="GND45" gate="1" x="-200.66" y="129.54"/>
 </instances>
 <busses>
 </busses>
@@ -25936,18 +25924,6 @@ czarny</text>
 <pinref part="GND19" gate="1" pin="GND"/>
 <wire x1="53.34" y1="119.38" x2="40.64" y2="119.38" width="0.1524" layer="91"/>
 </segment>
-<segment>
-<pinref part="GND44" gate="1" pin="GND"/>
-<wire x1="-200.66" y1="116.84" x2="-200.66" y2="119.38" width="0.1524" layer="91"/>
-<pinref part="R45" gate="G$1" pin="1"/>
-<wire x1="-200.66" y1="119.38" x2="-198.12" y2="119.38" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="GND45" gate="1" pin="GND"/>
-<wire x1="-200.66" y1="132.08" x2="-200.66" y2="134.62" width="0.1524" layer="91"/>
-<pinref part="R47" gate="G$1" pin="1"/>
-<wire x1="-200.66" y1="134.62" x2="-198.12" y2="134.62" width="0.1524" layer="91"/>
-</segment>
 </net>
 <net name="+3V3" class="0">
 <segment>
@@ -26164,13 +26140,6 @@ czarny</text>
 <wire x1="-200.66" y1="104.14" x2="-208.28" y2="104.14" width="0.1524" layer="91"/>
 <label x="-213.36" y="104.14" size="1.778" layer="95"/>
 </segment>
-<segment>
-<pinref part="R45" gate="G$1" pin="2"/>
-<pinref part="R44" gate="G$1" pin="1"/>
-<wire x1="-187.96" y1="119.38" x2="-185.42" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="-187.96" y1="119.38" x2="-187.96" y2="124.46" width="0.1524" layer="91"/>
-<label x="-190.5" y="124.46" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="N$40" class="0">
 <segment>
@@ -26320,12 +26289,6 @@ czarny</text>
 <label x="-76.2" y="25.4" size="1.778" layer="95"/>
 <pinref part="JP2" gate="A" pin="7"/>
 </segment>
-<segment>
-<pinref part="R44" gate="G$1" pin="2"/>
-<wire x1="-175.26" y1="119.38" x2="-172.72" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="-172.72" y1="119.38" x2="-172.72" y2="121.92" width="0.1524" layer="91"/>
-<label x="-172.72" y="121.92" size="1.778" layer="95"/>
-</segment>
 </net>
 <net name="V+" class="0">
 <segment>
@@ -26357,12 +26320,6 @@ czarny</text>
 <wire x1="55.88" y1="-91.44" x2="55.88" y2="-99.06" width="0.1524" layer="91"/>
 <pinref part="D6" gate="G$1" pin="C"/>
 <pinref part="P+10" gate="1" pin="V+"/>
-</segment>
-<segment>
-<pinref part="R46" gate="G$1" pin="2"/>
-<wire x1="-175.26" y1="134.62" x2="-172.72" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="-172.72" y1="134.62" x2="-172.72" y2="137.16" width="0.1524" layer="91"/>
-<label x="-172.72" y="137.16" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MIR_POW" class="0">
@@ -26833,13 +26790,6 @@ czarny</text>
 <pinref part="U1" gate="PORTA_L" pin="PA1"/>
 <wire x1="-200.66" y1="101.6" x2="-208.28" y2="101.6" width="0.1524" layer="91"/>
 <label x="-213.36" y="101.6" size="1.778" layer="95"/>
-</segment>
-<segment>
-<pinref part="R47" gate="G$1" pin="2"/>
-<pinref part="R46" gate="G$1" pin="1"/>
-<wire x1="-187.96" y1="134.62" x2="-185.42" y2="134.62" width="0.1524" layer="91"/>
-<wire x1="-187.96" y1="134.62" x2="-187.96" y2="139.7" width="0.1524" layer="91"/>
-<label x="-190.5" y="139.7" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="SIM_POW" class="0">
